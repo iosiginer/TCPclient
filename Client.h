@@ -1,17 +1,14 @@
-/**
- * Created by Josef Ginerman on 04/12/17.
- * ID : 332494830
- **/
-
-#ifndef TCPCLIENT_CLIENT_H
-#define TCPCLIENT_CLIENT_H
+#ifndef CLIENT_CLIENT_H
+#define CLIENT_CLIENT_H
 
 
 class Client {
 public:
     Client(const char *serverIP, int serverPort);
     void connectToServer();
-    int sendExercise(int arg1, char op, int arg2);
+    void readFunction();
+    int playerNumber;
+    void writeFunction();
 private:
     const char *serverIP;
     int serverPort;
@@ -19,4 +16,4 @@ private:
 };
 
 
-#endif //TCPCLIENT_CLIENT_H
+#endif //CLIENT_CLIENT_H
